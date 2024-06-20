@@ -18,6 +18,7 @@
 .daily-selector-container .calendar-header {
   padding: 28px 20px 16px;
   background-color: #000000;
+  cursor: pointer;
 }
 .daily-selector-container .calendar-header .date {
   color: #fff;
@@ -30,8 +31,6 @@
 .daily-selector-container .calendar-navigation {
   height: 30px;
   margin: 20px 10px 10px;
-}
-.daily-selector-container .calendar-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +85,7 @@
 .daily-selector-container .calendar-days .day {
   cursor: pointer;
 }
-.daily-selector-container .calendar-action {
+/* .daily-selector-container .calendar-action {
   margin-top: 24px;
   padding: 8px 0;
   text-align: right;
@@ -102,6 +101,27 @@
   font-size: 15px;
   outline: 0;
   cursor: pointer;
+} */
+.calendar-action {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+.calendar-action button {
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.calendar-action button:hover {
+  background-color: #fff;
+  background-color: #ccc;
 }
 .daily-selector-container .calendar-footer {
   height: 30px;
