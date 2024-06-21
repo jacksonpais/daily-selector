@@ -95,29 +95,19 @@
   text-align: right;
   margin-bottom: 10px;
 }
-.daily-selector-container .calendar-action button {
-  border: none;
-  background-color: transparent;
-  border-radius: 3px;
-  display: inline-block;
-  padding: 0 8px;
-  margin-right: 8px;
-  font-size: 15px;
-  outline: 0;
-  cursor: pointer;
-}
+
 .calendar-action {
   display: flex;
-  justify-content: space-between; /* Space between buttons */
+  justify-content: space-between;
   padding: 10px;
   background-color: #f0f0f0;
   border-top: 1px solid #ccc;
 }
 
-.calendar-action button {
+.daily-selector-container .calendar-action button {
   color: #000;
   border: none;
-  padding: 5px 10px;
+  padding: 8px 10px;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
@@ -125,7 +115,7 @@
 
 .calendar-action button:hover {
   background-color: #fff;
-  background-color: #ccc;
+  background-color: #e9e8e8;
 }
 .daily-selector-container .calendar-footer {
   height: 30px;
@@ -185,13 +175,15 @@
 
 .daily-selector-container .calendar-past-years .year-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 3px;
   background-color: #000;
   color: #fff;
   cursor: pointer;
-  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  height: 25px;
+  font-size: 12px;
 }
 
 .daily-selector-container .calendar-past-years .year-content {
@@ -209,19 +201,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 25px;
   font-size: 12px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
+  padding: 3px;
+  font-size: 12px;
 }
 
 .daily-selector-container .calendar-past-years .month-item:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #000;
 }
 
 .daily-selector-container .hide {
   display: none;
+}
+
+.daily-selector-container
+  .calendar-past-years
+  .calendar-year-navigation
+  .search-bar {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.daily-selector-container .calendar-past-years .year-title {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 20px;
 }
