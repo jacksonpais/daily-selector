@@ -28,7 +28,8 @@
   color: #fff;
   font-size: 15px;
 }
-.daily-selector-container .calendar-navigation, .daily-selector-container .calendar-year-navigation {
+.daily-selector-container .calendar-navigation,
+.daily-selector-container .calendar-year-navigation {
   height: 30px;
   margin: 20px 10px 10px;
   display: flex;
@@ -37,14 +38,16 @@
   color: #000000;
   box-sizing: border-box;
 }
-.daily-selector-container .calendar-navigation .icon, .daily-selector-container .calendar-year-navigation .icon {
+.daily-selector-container .calendar-navigation .icon,
+.daily-selector-container .calendar-year-navigation .icon {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 16px;
   color: #000000;
 }
-.daily-selector-container .calendar-navigation h2, .daily-selector-container .calendar-year-navigation h2 {
+.daily-selector-container .calendar-navigation h2,
+.daily-selector-container .calendar-year-navigation h2 {
   margin: 0;
   font-size: 13px;
   font-weight: 600;
@@ -58,6 +61,7 @@
   gap: 5px;
   height: 290px;
   padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .daily-selector-container .calendar-days div {
   display: flex;
@@ -85,7 +89,7 @@
 .daily-selector-container .calendar-days .day {
   cursor: pointer;
 }
-/* .daily-selector-container .calendar-action {
+.daily-selector-container .calendar-action {
   margin-top: 24px;
   padding: 8px 0;
   text-align: right;
@@ -101,7 +105,7 @@
   font-size: 15px;
   outline: 0;
   cursor: pointer;
-} */
+}
 .calendar-action {
   display: flex;
   justify-content: space-between; /* Space between buttons */
@@ -131,32 +135,40 @@
   background-color: #000000;
   box-sizing: border-box;
 }
+
 .daily-selector-container .calendar-past-years .year-list {
-  height: 330px;
-  overflow-y: auto;
+  height: 300px;
+  overflow-y: 300px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   position: relative;
 }
 
-.daily-selector-container .calendar-past-years .year-list::-webkit-scrollbar-track {
+.daily-selector-container
+  .calendar-past-years
+  .year-list::-webkit-scrollbar-track {
   background-color: #f0f0f0;
   border-radius: 8px;
 }
 
-.daily-selector-container .calendar-past-years .year-list::-webkit-scrollbar-thumb {
+.daily-selector-container
+  .calendar-past-years
+  .year-list::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 8px;
   border: 3px solid #f0f0f0;
 }
 
-.daily-selector-container .calendar-past-years .year-list::-webkit-scrollbar-thumb:hover {
+.daily-selector-container
+  .calendar-past-years
+  .year-list::-webkit-scrollbar-thumb:hover {
   background-color: #bbb;
 }
 
 .daily-selector-container .calendar-past-years .year-list {
   scrollbar-width: none;
+  overflow-y: auto;
 }
 
 .daily-selector-container .calendar-past-years .year-list::-webkit-scrollbar {
@@ -176,7 +188,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #000;
   color: #fff;
   cursor: pointer;
   border-bottom: 1px solid #ccc;
@@ -210,6 +222,6 @@
   border-color: #007bff;
 }
 
-.daily-selector-container .hide{
+.daily-selector-container .hide {
   display: none;
 }
