@@ -11,18 +11,20 @@
 </head>
 
 <body>
-    <div>
-        <input type="text" id="birthdate" class="daily-selector">
-    </div>
+    <input type="text" id="birthdate" class="daily-selector">
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             dailySelector.initialize({
                 elementId: "birthdate",
-                theme: "inline",
+                theme: "popup",
                 displayFormat: "DD-MMM-YYYY",
                 year: {
                     min: 1970,
-                    max: 2000
+                    max: 2024
+                },
+                color: {
+                    primary: "#EF4444",
+                    secondary: "#FEF2F2"
                 }
             });
         });
