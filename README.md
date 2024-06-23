@@ -34,12 +34,13 @@
 
 ### A simple JavaScript Datepicker
 
-* Lightweight
-* No dependencies
+- Lightweight
+- No dependencies
 
 ![daily-selector Screenshot][screenshot]
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Features](#features)
 - [Demo](#demo)
@@ -50,16 +51,86 @@
 - [License](#license)
 
 ## Overview
+
 The **daily-selector** is a lightweight and customizable date picker tool that can be easily integrated into any web application. This utility provides a user-friendly interface for selecting dates, months, and years, with a smooth and responsive design.
 
 ## Features
+
 - **Responsive Design**: Ensures the date selector looks great on any device.
 - **Month and Year Selection**: Allows users to quickly navigate between months and years.
 - **Customizable UI**: Easily change the look and feel to match your application's theme.
 - **No External Dependencies**: Pure HTML, CSS, and JavaScript.
 
 ## Demo
+
 Check out the live demo [here](https://example.com).
 
 ## Installation
-To integrate daily-selector into your project, follow these steps:
+
+To integrate **daily-selector** into your project, follow these steps:
+
+link directly to the file:
+
+```html
+    <script src="./daily-selector.js"></script>
+```
+
+## Styles
+
+You will also need to include DailySelector CSS file.
+
+link to the file:
+
+```html
+    <link rel="stylesheet" href="./daily-selector.css" />
+```
+
+## Usage
+
+**daily-selector** can be bound to an input field:
+
+```html
+    <input type="text" id="birthdate" class="daily-selector" />
+```
+
+Add the JavaScript to the end of your document:
+
+```html
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            dailySelector.initialize({
+                elementId: "birthdate",
+                theme: "popup",
+                displayFormat: "DD-MMM-YYYY",
+                year: {
+                    min: 1970,
+                    max: 2024
+                },
+                color: {
+                    primary: "purple",
+                    secondary: "violet"
+                }
+            });
+        });
+    </script>
+```
+
+If you're using **jQuery** :
+
+```javascript
+    $( document ).ready(function() {
+        dailySelector.initialize({
+            elementId: "birthdate",
+            theme: "popup",
+            displayFormat: "DD-MMM-YYYY",
+            year: {
+                min: 1970,
+                max: 2024
+            },
+            color: {
+                primary: "purple",
+                secondary: "violet"
+            }
+        });
+    });
+```
