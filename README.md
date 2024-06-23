@@ -1,27 +1,11 @@
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/jacksonpais/daily-selector">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+  <h3 align="center">daily-selector</h3>
 </div>
-
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -48,9 +32,12 @@
   </ol>
 </details>
 
-# date-selector
+### A simple JavaScript Datepicker
 
-![Date Selector](https://via.placeholder.com/600x300?text=Date+Selector+Utility)
+* Lightweight
+* No dependencies
+
+![daily-selector Screenshot][screenshot]
 
 ## Table of Contents
 - [Overview](#overview)
@@ -63,22 +50,16 @@
 - [License](#license)
 
 ## Overview
-The **Date Selector Utility** is a lightweight and customizable date picker tool that can be easily integrated into any web application. This utility provides a user-friendly interface for selecting dates, months, and years, with a smooth and responsive design.
+The **daily-selector** is a lightweight and customizable date picker tool that can be easily integrated into any web application. This utility provides a user-friendly interface for selecting dates, months, and years, with a smooth and responsive design.
 
 ## Features
 - **Responsive Design**: Ensures the date selector looks great on any device.
 - **Month and Year Selection**: Allows users to quickly navigate between months and years.
 - **Customizable UI**: Easily change the look and feel to match your application's theme.
-- **Keyboard Navigation**: Supports keyboard inputs for accessibility.
 - **No External Dependencies**: Pure HTML, CSS, and JavaScript.
 
 ## Demo
 Check out the live demo [here](https://example.com).
 
 ## Installation
-To integrate the Date Selector Utility into your project, follow these steps:
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/date-selector-utility.git
-   cd date-selector-utility
+To integrate daily-selector into your project, follow these steps:
