@@ -140,4 +140,4 @@ Allowed separators are:
 
 ### Configuration
 
-comming soon
+coming soon
