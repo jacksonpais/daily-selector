@@ -134,3 +134,32 @@ If you're using **jQuery** :
         });
     });
 ```
+### Formatting
+
+By default, dates are formatted and parsed using standard JavaScript Date object.
+
+```html
+  Wed Jun 05 2020 00:00:00 GMT+0530 (India Standard Time)
+```
+
+But it can be formatted with built-in options.
+
+| Built-in Formats | Output                                      |
+|------------------|---------------------------------------------|
+| D                | Dates - 1, 2, 3, 4, 5,...9, 10, 11          |
+| DD               | Dates - 01, 02, 03, 04, 05, ....09, 10, 11  |
+| M                | Months - 1, 2, 3, 4, 5,...9, 10, 11         |
+| MM               | Months - 01, 02, 03, 04, 05, ....09, 10, 11 |
+| MMM              | Months - Jan, Feb, Mar.....                 |
+| MMMM             | Months - January, February, March.....      |
+| YY             | Years - 22, 23, 24...                         |
+| YYYY             | years - 2022, 2023, 2024.....               |
+| B                | Days - 1, 2, 3, 4, 5,...9, 10, 11           |
+| BB               | Days - 01, 02, 03, 04, 05, ....09, 10, 11   |
+| BBB              | Days - Sun, Mon, Tue.....                   |
+| BBBB             | Days - Sunday, Monday, Tuesday.....         |
+
+Allowed separators are:
+```html
+  - / : . , 
+```
