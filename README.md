@@ -46,9 +46,8 @@
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
+- [Formatting](#formatting)
+- [Configuration](#configuration)
 
 ## Overview
 
@@ -63,7 +62,7 @@ The **daily-selector** is a lightweight and customizable date picker tool that c
 
 ## Demo
 
-Check out the live demo [here](https://example.com).
+Check out the live demo [coming soon].
 
 ## Installation
 
@@ -163,3 +162,7 @@ Allowed separators are:
 ```html
   - / : . , 
 ```
+
+### Configuration
+
+comming soon
