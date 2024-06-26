@@ -16,7 +16,12 @@
         document.addEventListener("DOMContentLoaded", (event) => {
             dailySelector.initialize({
                 elementId: "birthdate",
-                includeHeader: false
+                includeHeader: false,
+                displayFormat: "DD-MMM-YYYY",
+                year: {
+                    min: 1970,
+                    max: 1991
+                }
             });
         });
     </script>
