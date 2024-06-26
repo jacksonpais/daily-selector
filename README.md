@@ -7,10 +7,12 @@
   <h3 align="center">daily-selector</h3>
 </div>
 
-### A simple JavaScript Datepicker
+### A simple JavaScript Date Selector
 
 - Lightweight
 - No dependencies
+- Highly customizable UI
+- Wide range of features
 
 ![daily-selector Screenshot][screenshot]
 
@@ -26,7 +28,7 @@
 
 ## Overview
 
-The **daily-selector** is a lightweight and customizable date picker tool that can be easily integrated into any web application. This utility provides a user-friendly interface for selecting dates, months, and years, with a smooth and responsive design.
+The **daily-selector** is a lightweight, feature-rich and customizable date selector tool that can be easily integrated into any web application. This utility provides a user-friendly interface for selecting dates, months, and years, with a smooth and responsive design.
 
 ## Features
 
@@ -34,6 +36,7 @@ The **daily-selector** is a lightweight and customizable date picker tool that c
 - **Month and Year Selection**: Allows users to quickly navigate between months and years.
 - **Customizable UI**: Easily change the look and feel to match your application's theme.
 - **No External Dependencies**: Pure HTML, CSS, and JavaScript.
+- **Feature rich utility**: Offers a wide range of features related to date selector.
 
 ## Demo
 
@@ -73,21 +76,7 @@ Add the JavaScript to the end of your document:
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             dailySelector.initialize({
-                elementId: "birthdate",
-                includeHeader: false,
-                displayFormat: "DD-MMM-YYYY",
-                year: {
-                    min: 1970,
-                    max: 2024
-                },
-                color: {
-                    primary: "purple",
-                    secondary: "violet"
-                },
-                closeOptions: {
-                    closeOnClickOutsideModal: false,
-                    closeOnKeyboardKeys: false,
-                }
+                elementId: "birthdate"
             });
         });
     </script>
@@ -97,23 +86,9 @@ If you're using **jQuery** :
 
 ```javascript
     $( document ).ready(function() {
-            dailySelector.initialize({
-                elementId: "birthdate",
-                includeHeader: false,
-                displayFormat: "DD-MMM-YYYY",
-                year: {
-                    min: 1970,
-                    max: 2024
-                },
-                color: {
-                    primary: "purple",
-                    secondary: "violet"
-                },
-                closeOptions: {
-                    closeOnClickOutsideModal: false,
-                    closeOnKeyboardKeys: false,
-                }
-            });
+        dailySelector.initialize({
+            elementId: "birthdate"
+        });
     });
 ```
 ### Formatting
