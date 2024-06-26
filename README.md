@@ -74,7 +74,7 @@ Add the JavaScript to the end of your document:
         document.addEventListener("DOMContentLoaded", (event) => {
             dailySelector.initialize({
                 elementId: "birthdate",
-                theme: "popup",
+                includeHeader: false,
                 displayFormat: "DD-MMM-YYYY",
                 year: {
                     min: 1970,
@@ -83,6 +83,10 @@ Add the JavaScript to the end of your document:
                 color: {
                     primary: "purple",
                     secondary: "violet"
+                },
+                closeOptions: {
+                    closeOnClickOutsideModal: false,
+                    closeOnKeyboardKeys: false,
                 }
             });
         });
@@ -93,19 +97,23 @@ If you're using **jQuery** :
 
 ```javascript
     $( document ).ready(function() {
-        dailySelector.initialize({
-            elementId: "birthdate",
-            theme: "popup",
-            displayFormat: "DD-MMM-YYYY",
-            year: {
-                min: 1970,
-                max: 2024
-            },
-            color: {
-                primary: "purple",
-                secondary: "violet"
-            }
-        });
+            dailySelector.initialize({
+                elementId: "birthdate",
+                includeHeader: false,
+                displayFormat: "DD-MMM-YYYY",
+                year: {
+                    min: 1970,
+                    max: 2024
+                },
+                color: {
+                    primary: "purple",
+                    secondary: "violet"
+                },
+                closeOptions: {
+                    closeOnClickOutsideModal: false,
+                    closeOnKeyboardKeys: false,
+                }
+            });
     });
 ```
 ### Formatting
@@ -126,7 +134,7 @@ But it can be formatted with built-in options.
 | MM               | Months - 01, 02, 03, 04, 05, ....09, 10, 11 |
 | MMM              | Months - Jan, Feb, Mar.....                 |
 | MMMM             | Months - January, February, March.....      |
-| YY             | Years - 22, 23, 24...                         |
+| YY               | Years - 22, 23, 24...                       |
 | YYYY             | years - 2022, 2023, 2024.....               |
 | B                | Days - 1, 2, 3, 4, 5,...9, 10, 11           |
 | BB               | Days - 01, 02, 03, 04, 05, ....09, 10, 11   |
