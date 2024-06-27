@@ -87,7 +87,7 @@ body.daily-selector-modal-active {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 5px;
-  height: 290px;
+  height: 240px;
   padding: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -100,8 +100,8 @@ body.daily-selector-modal-active {
   border-radius: 4px;
   text-align: center;
   font-size: 10px;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 .daily-selector-container .calendar-days .header {
   color: #fff;
@@ -115,7 +115,7 @@ body.daily-selector-modal-active {
   cursor: pointer;
 }
 .daily-selector-container .calendar-action {
-  padding: 8px 0;
+  padding: 5px 0;
   text-align: right;
   margin-bottom: 10px;
 }
@@ -130,7 +130,7 @@ body.daily-selector-modal-active {
 
 .daily-selector-container .calendar-action button {
   border: none;
-  padding: 8px 10px;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
