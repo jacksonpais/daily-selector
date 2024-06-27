@@ -23,8 +23,8 @@
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Formatting](#formatting)
 - [Configuration](#configuration)
+- [Formatting](#formatting)
 
 ## Overview
 
@@ -72,7 +72,7 @@ link to the file:
 
 Add the JavaScript to the end of your document:
 
-```html
+```javascript
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             dailySelector.initialize({
@@ -85,12 +85,54 @@ Add the JavaScript to the end of your document:
 If you're using **jQuery** :
 
 ```javascript
-    $( document ).ready(function() {
-        dailySelector.initialize({
-            elementId: "birthdate"
+    <script>
+        $( document ).ready(function() {
+            dailySelector.initialize({
+                elementId: "birthdate"
+            });
         });
-    });
+    </script>
 ```
+Only elementId is required compulsorily. All other options of the **daily-selector** help in customizing the **daily-selector**.
+
+More of this is explained in the configuration section.
+
+### Configuration
+
+**daily-selector** in action using all the options available:
+
+```javascript
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+           dailySelector.initialize({
+                elementId: "birthdate",
+                includeHeader: false,
+                displayFormat: "DD-MMM-YYYY",
+                year: {
+                    min: 1970,
+                    max: 2024
+                },
+                color: {
+                    primary: "purple",
+                    secondary: "violet"
+                },
+                closeOptions: {
+                    closeOnClickOutsideModal: false,
+                    closeOnKeyboardKeys: false,
+                }
+            });
+        });
+    </script>
+```
+Please note: we are in the process of adding more features to our beloved **daily-selector** and the above will be updated.
+
+* `elementId` binds the date selector to a form field
+* `includeHeader` adds header to the date selector, this header acts as a text holder for the selected date with date, month year and day. **By default includeHeader is false** 
+* `displayFormat` formats date to the selected format, more information on formatting is mentioned in the [next section](#formatting). **By default displayFormat is set to javascript date object** 
+* `year` sets the min and max to the limit of year list in date selector. The year has 2 inputs min and max. **By default min is set to current year - 10 and max is set to current year** 
+* `color` sets the color to the UI. There is two colors for the date selector ui, primary and secondary. **By default primary color is set to #000000 and secondary color is set to #e9e8e8** 
+* `closeOptions` sets the options for the closing of the modal. Date selector opens on the modal, this configuration helps how to closing of the modal should behave. There are two options in closeOptions - closeOnClickOutsideModal and closeOnKeyboardKeys. The names of the options define its meaning clearly. **By default closeOnClickOutsideModal is set to false and closeOnKeyboardKeys is set to false** 
+
 ### Formatting
 
 By default, dates are formatted and parsed using standard JavaScript Date object.
@@ -120,7 +162,3 @@ Allowed separators are:
 ```html
   - / : . , 
 ```
-
-### Configuration
-
-coming soon
