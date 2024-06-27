@@ -37,13 +37,13 @@ The **daily-selector** is a lightweight, feature-rich and customizable date sele
 
 ## Secreenshot
 
-# Default look
+#### Default look
 
-![1](images/screenshot/1.png)
+![1](images/screenshot/1.jpg)
 
-# Primary and Secondary color config
+#### Primary and Secondary color config
 
-![2](images/screenshot/2.png)
+![2](images/screenshot/2.jpg)
 
 ## Demo
 
