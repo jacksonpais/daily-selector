@@ -1,10 +1,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/jacksonpais/daily-selector">
-    <img src="images/daily-selector.png" alt="Logo" width="80" height="80">
+    <img src="images/daily-selector.png" alt="daily-selector" width="300" height="100">
   </a>
-
-  <h3 align="center">daily-selector</h3>
 </div>
 
 ### A simple JavaScript Date Selector
@@ -13,8 +11,6 @@
 - No dependencies
 - Highly customizable UI
 - Wide range of features
-
-![daily-selector Screenshot][screenshot]
 
 ## Table of Contents
 
