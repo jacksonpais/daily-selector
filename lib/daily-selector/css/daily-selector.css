@@ -58,7 +58,7 @@ body.daily-selector-modal-active {
 }
 .daily-selector-container .calendar-navigation,
 .daily-selector-container .calendar-year-navigation {
-  height: 30px;
+  height: 20px;
   margin: 20px 10px 10px;
   display: flex;
   justify-content: space-between;
@@ -100,8 +100,8 @@ body.daily-selector-modal-active {
   border-radius: 4px;
   text-align: center;
   font-size: 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .daily-selector-container .calendar-days .header {
   color: #fff;
@@ -149,8 +149,8 @@ body.daily-selector-modal-active {
 }
 
 .daily-selector-container .calendar-past-years .year-list {
-  height: 300px;
-  overflow-y: 300px;
+  height: 250px;
+  overflow-y: 250px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
