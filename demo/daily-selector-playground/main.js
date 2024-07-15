@@ -115,10 +115,10 @@ function initialize() {
     obj = getObj();
     if (e.target.value !== "") {
       if (obj.closeOptions !== undefined) {
-        obj.closeOptions.closeOnKeyboardKeys = e.target.value;
+        obj.closeOptions.closeOnKeyboardKeys =  e.target.value === "false" ? false : true;
       } else {
         obj.closeOptions = {
-          closeOnKeyboardKeys: e.target.value
+          closeOnKeyboardKeys:  e.target.value === "false" ? false : true
         }
       }
     }
