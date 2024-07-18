@@ -10,7 +10,6 @@ export default function HomePage() {
   const [output, setOutput] = useState("");
 
   useEffect(() => {
-    console.log(option);
     dailySelector.initialize(option);
     setOutput(cleanup());
   }, []);
@@ -140,13 +139,41 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>daily-selector</h1>
-      <p>
-        The daily-selector is a lightweight, feature-rich and customizable date
-        selector tool that can be easily integrated into any web application.
-        This utility provides a user-friendly interface for selecting dates,
-        months, and years, with a smooth and responsive design.
-      </p>
+      <div className="section">
+        <h3>Overview</h3>
+        <p>
+          The daily-selector is a lightweight, feature-rich and customizable
+          date selector tool that can be easily integrated into any web
+          application. This utility provides a user-friendly interface for
+          selecting dates, months, and years, with a smooth and responsive
+          design.
+        </p>
+      </div>
+      <div className="section">
+        <h3>Features</h3>
+        <ul className="features-list">
+          <li>
+            <strong>Responsive Design:</strong> Ensures the date selector looks
+            great on any device.
+          </li>
+          <li>
+            <strong>Month and Year Selection:</strong> Allows users to quickly
+            navigate between months and years.
+          </li>
+          <li>
+            <strong>Customizable UI:</strong> Easily change the look and feel to
+            match your application's theme.
+          </li>
+          <li>
+            <strong>No External Dependencies:</strong> Pure HTML, CSS, and
+            JavaScript.
+          </li>
+          <li>
+            <strong>Feature rich utility:</strong> Offers a wide range of
+            features related to date selector.
+          </li>
+        </ul>
+      </div>
       <div className="container">
         <div className="table-container">
           <table>
