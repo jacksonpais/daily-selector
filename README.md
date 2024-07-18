@@ -16,7 +16,6 @@
 
 - [Overview](#overview)
 - [Features](#features)
-- [Secreenshot](#screenshot)
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -47,13 +46,19 @@ The **daily-selector** is a lightweight, feature-rich and customizable date sele
 
 ## Demo
 
-Check out the live demo [coming soon].
+Check out the live [demo](https://daily-selector.silverrug.in/).
 
 ## Installation
 
 To integrate **daily-selector** into your project, follow these steps:
 
-link directly to the file:
+You can install daily-selector as an NPM package:
+
+```html
+    npm i daily-selector
+```
+
+Or link directly to the file:
 
 ```html
     <script src="./daily-selector.js"></script>
@@ -63,7 +68,13 @@ link directly to the file:
 
 You will also need to include DailySelector CSS file.
 
-link to the file:
+You will also need to include Pikaday CSS file. This step depends on how Pikaday was installed. Either import from NPM:
+
+```html
+    import "daily-selector/src/daily-selector.css";
+```
+
+Or link to the file:
 
 ```html
     <link rel="stylesheet" href="./daily-selector.css" />
@@ -100,6 +111,17 @@ If you're using **jQuery** :
         });
     </script>
 ```
+
+If you're using **React** :
+
+```javascript
+    useEffect(() => {
+        dailySelector.initialize({
+                elementId: "birthdate"
+            });
+    }, []);
+```
+
 Only elementId is required compulsorily. All other options of the **daily-selector** help in customizing the **daily-selector**.
 
 More of this is explained in the configuration section.
