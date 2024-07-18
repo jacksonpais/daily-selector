@@ -1,0 +1,28 @@
+{
+  "name": "daily-selector",
+  "version": "1.0.1",
+  "description": "The daily-selector is a lightweight, feature-rich and customizable date selector tool that can be easily integrated into any web application. This utility provides a user-friendly interface for selecting dates, months, and years, with a smooth and responsive design.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacksonpais/daily-selector.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "npm"
+  ],
+  "author": "Jackson Pais",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "bugs": {
+    "url": "https://github.com/jacksonpais/daily-selector/issues"
+  },
+  "homepage": "https://github.com/jacksonpais/daily-selector#readme"
+}
