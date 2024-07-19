@@ -6,7 +6,6 @@
   font-weight: 600;
 }
 
-
 input[type="text"],
 input[type="number"],
 select {
@@ -64,4 +63,27 @@ pre {
   padding: 10px;
   border: 1px solid #ddd;
   overflow: auto;
+}
+
+.configuration-list li{
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+.configuration-list li strong{
+  font-weight: 600;
+}
+
+.configuration-item{
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #014075;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 15px;
+  border: 1px solid #e0e0e0;
+  top: 8px;
+  right: 40px;
+  transition: opacity 0.3s;
 }

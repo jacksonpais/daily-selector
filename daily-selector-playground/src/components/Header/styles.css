@@ -15,8 +15,18 @@
 .logo {
   font-size: 24px;
   margin-left: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center; /* Center align the SVG within its container */
+  margin-right: 8px; /* Adjust the spacing between the SVG and text as needed */
+}
+
+.logo svg {
+  display: block; /* Prevent SVG from having additional vertical space */
 }
 
 .menu-icon {

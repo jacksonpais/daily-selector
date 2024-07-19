@@ -2,6 +2,8 @@ import "./styles.css";
 import { useEffect, useState } from "react";
 import { dailySelector, Options } from "daily-selector";
 import "daily-selector/src/daily-selector.css";
+import CopyContent from "../../components/CopyContent/CopyContent";
+import Title from "../../components/Title/Title";
 
 export default function HomePage() {
   const [option, setOption] = useState<Options>({
@@ -136,9 +138,57 @@ export default function HomePage() {
   const yearList = [
     2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024,
   ];
+  const npmJsContent = "npm i daily-selector";
+  const scriptContent = `<script src="./daily-selector.js"></script>`;
+  const importCssContent = `import "daily-selector/src/daily-selector.css";`;
+  const cssLinkContent = `<link rel="stylesheet" href="./daily-selector.css" />`;
+  const usageContent = `<input type="text" id="birthdate" class="daily-selector" />`;
+  const jsContent = `<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    dailySelector.initialize({
+      elementId: "birthdate"
+    });
+  });
+</script>`;
+  const jqueryContent = `<script>
+  $( document ).ready(function() {
+    dailySelector.initialize({
+       elementId: "birthdate"
+    });
+  });
+</script>`;
+  const reactContent = `useEffect(() => {
+  dailySelector.initialize({
+    elementId: "birthdate"
+  });
+}, []);`;
+  const allOptionContent = `<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    dailySelector.initialize({
+      elementId: "birthdate",
+      includeHeader: false,
+      displayFormat: "DD-MMM-YYYY",
+      year: {
+        min: 1970,
+        max: 2024
+      },
+      color: {
+        primary: "rgb(5 64 181)",
+        secondary: "#bfecff"
+      },
+      closeOptions: {
+        closeOnClickOutsideModal: false,
+        closeOnKeyboardKeys: false,
+      }
+    });
+  });
+</script>`;
+  const jsDateContent = `Wed Jun 05 2020 00:00:00 GMT+0530 (India Standard Time)`;
+  const separatorContent = `- / : . ,`;
 
   return (
     <>
+      {/* <Title title={menuItem?.title} /> */}
       <div className="section">
         <h3>Overview</h3>
         <p>
@@ -149,6 +199,7 @@ export default function HomePage() {
           design.
         </p>
       </div>
+
       <div className="section">
         <h3>Features</h3>
         <ul className="features-list">
@@ -174,6 +225,177 @@ export default function HomePage() {
           </li>
         </ul>
       </div>
+
+      <div className="section">
+        <h3>Installation</h3>
+        <p>
+          To integrate daily-selector into your project, follow these steps:
+        </p>
+        <p>You can install daily-selector as an NPM package:</p>
+        <CopyContent content={npmJsContent} />
+        <p>Or link directly to the file:</p>
+        <CopyContent content={scriptContent} />
+      </div>
+
+      <div className="section">
+        <h3>Styles</h3>
+        <p>You will also need to include DailySelector CSS file.</p>
+        <p>
+          You will also need to include Pikaday CSS file. This step depends on
+          how Pikaday was installed. Either import from NPM:
+        </p>
+        <CopyContent content={importCssContent} />
+        <p>Or link to the file:</p>
+        <CopyContent content={cssLinkContent} />
+      </div>
+
+      <div className="section">
+        <h3>Usage</h3>
+        <p>daily-selector can be bound to an input field:</p>
+        <CopyContent content={usageContent} />
+        <p>Add the JavaScript to the end of your document:</p>
+        <CopyContent content={jsContent} />
+        <p>If you're using jQuery :</p>
+        <CopyContent content={jqueryContent} />
+        <p>If you're using React :</p>
+        <CopyContent content={reactContent} />
+        <p>
+          Only elementId is required compulsorily. All other options of the
+          daily-selector help in customizing the daily-selector.
+        </p>
+        <p>More of this is explained in the configuration section.</p>
+      </div>
+
+      <div className="section">
+        <h3>Configuration</h3>
+        <p>daily-selector in action using all the options available:</p>
+        <CopyContent content={allOptionContent} />
+        <p>
+          Please note: we are in the process of adding more features to our
+          beloved daily-selector and the above will be updated.
+        </p>
+        <ul className="configuration-list">
+          <li>
+            <span className="configuration-item">elementId</span> binds the date
+            selector to a form field
+          </li>
+          <li>
+            <span className="configuration-item">includeHeader</span> adds
+            header to the date selector, this header acts as a text holder for
+            the selected date with date, month year and day.{" "}
+            <strong>By default includeHeader is false</strong>
+          </li>
+          <li>
+            <span className="configuration-item">displayFormat</span> formats
+            date to the selected format, more information on formatting is
+            mentioned in the next section.{" "}
+            <strong>
+              By default displayFormat is set to javascript date object
+            </strong>
+          </li>
+          <li>
+            <span className="configuration-item">year</span> sets the min and
+            max to the limit of year list in date selector. The year has 2
+            inputs min and max.{" "}
+            <strong>
+              By default min is set to current year - 10 and max is set to
+              current year
+            </strong>
+          </li>
+          <li>
+            <span className="configuration-item">color</span> sets the color to
+            the UI. There is two colors for the date selector ui, primary and
+            secondary.{" "}
+            <strong>
+              By default primary color is set to #000000 and secondary color is
+              set to #e9e8e8
+            </strong>
+          </li>
+          <li>
+            <span className="configuration-item">closeOptions</span> sets the
+            options for the closing of the modal. Date selector opens on the
+            modal, this configuration helps how to closing of the modal should
+            behave. There are two options in closeOptions -
+            closeOnClickOutsideModal and closeOnKeyboardKeys. The names of the
+            options define its meaning clearly.{" "}
+            <strong>
+              By default closeOnClickOutsideModal is set to false and
+              closeOnKeyboardKeys is set to false
+            </strong>
+          </li>
+        </ul>
+      </div>
+
+      <div className="section">
+        <h3>Formatting</h3>
+        <p>
+          By default, dates are formatted and parsed using standard JavaScript
+          Date object.
+        </p>
+        <CopyContent content={jsDateContent} />
+        <p>But it can be formatted with built-in options.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Built-in Formats</th>
+              <th>Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D</td>
+              <td>Dates - 1, 2, 3, 4, 5,...9, 10, 11</td>
+            </tr>
+            <tr>
+              <td>DD</td>
+              <td>Dates - 01, 02, 03, 04, 05, ....09, 10, 11</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>Months - 1, 2, 3, 4, 5,...9, 10, 11</td>
+            </tr>
+            <tr>
+              <td>MM</td>
+              <td>Months - 01, 02, 03, 04, 05, ....09, 10, 11</td>
+            </tr>
+            <tr>
+              <td>MMM</td>
+              <td>Months - Jan, Feb, Mar.....</td>
+            </tr>
+            <tr>
+              <td>MMMM</td>
+              <td>Months - January, February, March.....</td>
+            </tr>
+            <tr>
+              <td>YY</td>
+              <td>Years - 22, 23, 24...</td>
+            </tr>
+            <tr>
+              <td>YYYY</td>
+              <td>years - 2022, 2023, 2024.....</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>Days - 1, 2, 3, 4, 5,...9, 10, 11</td>
+            </tr>
+            <tr>
+              <td>BB</td>
+              <td>Days - 01, 02, 03, 04, 05, ....09, 10, 11</td>
+            </tr>
+            <tr>
+              <td>BBB</td>
+              <td>Days - Sun, Mon, Tue.....</td>
+            </tr>
+            <tr>
+              <td>BBBB</td>
+              <td>Days - Sunday, Monday, Tuesday.....</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Allowed separators are:</p>
+        <CopyContent content={separatorContent} />
+      </div>
+
       <div className="container">
         <div className="table-container">
           <table>
