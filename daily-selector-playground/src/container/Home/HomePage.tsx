@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { dailySelector, Options } from "daily-selector";
 import "daily-selector/src/daily-selector.css";
 import CopyContent from "../../components/CopyContent/CopyContent";
-import Title from "../../components/Title/Title";
 
 export default function HomePage() {
   const [option, setOption] = useState<Options>({
