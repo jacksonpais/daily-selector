@@ -1,12 +1,23 @@
 .container {
-  display: flex;
-  justify-content: space-between;
   padding-top: 40px;
+}
+
+.playgroundContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.leftSection,
+.rightSection {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
 .table-container,
 .pre-container {
-  width: 48%;
+  width: 100%;
 }
 
 table {
@@ -29,4 +40,15 @@ td {
 
 th {
   background-color: #f4f4f4;
+}
+
+@media (min-width: 768px) {
+  .playgroundContainer {
+    flex-direction: row;
+  }
+
+  .leftSection,
+  .rightSection {
+    height: auto;
+  }
 }

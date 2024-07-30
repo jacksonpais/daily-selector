@@ -150,140 +150,165 @@ export default function PlaygroundPage(props: PlaygroundProps) {
       <Title title={menuItem?.title} />
 
       <div className={styles.container} id={menuItem?.name}>
-        <div className={styles["table-container"]}>
-          <table>
-            <thead>
-              <tr>
-                <th>Option</th>
-                <th>Property</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>elementId</td>
-                <td>birthdate</td>
-              </tr>
-              <tr>
-                <td>includeHeader</td>
-                <td>
-                  <select id="includeHeader" onChange={(e) => setChanges(e)}>
-                    <option value="">Select</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>displayFormat</td>
-                <td>
-                  <select id="displayFormat" onChange={(e) => setChanges(e)}>
-                    <option value="">Select</option>
-                    <option value="DD-MMM-YYYY">DD-MMM-YYYY</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>year</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>min</td>
-                <td>
-                  <select id="minYear" onChange={(e) => setChanges(e)}>
-                    <option value="">Select</option>
-                    {yearList.map((year) => (
-                      <option value={year} key={`minYear_${year}`}>
-                        {year}
-                      </option>
-                    ))}
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>max</td>
-                <td>
-                  <select id="maxYear" onChange={(e) => setChanges(e)}>
-                    <option value="">Select</option>
-                    {yearList.map((year) => (
-                      <option value={year} key={`maxYear_${year}`}>
-                        {year}
-                      </option>
-                    ))}
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>color</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>primary</td>
-                <td>
-                  <input
-                    type="color"
-                    id="primaryColor"
-                    autoComplete="off"
-                    onChange={(e) => setChanges(e)}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>secondary</td>
-                <td>
-                  <input
-                    type="color"
-                    id="secondaryColor"
-                    autoComplete="off"
-                    onChange={(e) => setChanges(e)}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>closeOptions</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>closeOnClickOutsideModal</td>
-                <td>
-                  <select
-                    id="closeOnClickOutsideModal"
-                    onChange={(e) => setChanges(e)}
-                  >
-                    <option value="">Select</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>closeOnKeyboardKeys</td>
-                <td>
-                  <select
-                    id="closeOnKeyboardKeys"
-                    onChange={(e) => setChanges(e)}
-                  >
-                    <option value="">Select</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
-                  </select>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className={styles["pre-container"]}>
-          <div>
-            <p id="message"></p>
+        <div className={styles.playgroundContainer}>
+          <div className={styles.leftSection}>
+            <div className={styles["table-container"]}>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Option</th>
+                    <th>Property</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>elementId</td>
+                    <td>birthdate</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>includeHeader</td>
+                    <td>
+                      <select
+                        id="includeHeader"
+                        onChange={(e) => setChanges(e)}
+                      >
+                        <option value="">Select</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>displayFormat</td>
+                    <td>
+                      <select
+                        id="displayFormat"
+                        onChange={(e) => setChanges(e)}
+                      >
+                        <option value="">Select</option>
+                        <option value="DD-MMM-YYYY">DD-MMM-YYYY</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>year</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>min</td>
+                    <td>
+                      <select id="minYear" onChange={(e) => setChanges(e)}>
+                        <option value="">Select</option>
+                        {yearList.map((year) => (
+                          <option value={year} key={`minYear_${year}`}>
+                            {year}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>max</td>
+                    <td>
+                      <select id="maxYear" onChange={(e) => setChanges(e)}>
+                        <option value="">Select</option>
+                        {yearList.map((year) => (
+                          <option value={year} key={`maxYear_${year}`}>
+                            {year}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>color</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>primary</td>
+                    <td>
+                      <input
+                        type="color"
+                        id="primaryColor"
+                        autoComplete="off"
+                        onChange={(e) => setChanges(e)}
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>secondary</td>
+                    <td>
+                      <input
+                        type="color"
+                        id="secondaryColor"
+                        autoComplete="off"
+                        onChange={(e) => setChanges(e)}
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>closeOptions</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>closeOnClickOutsideModal</td>
+                    <td>
+                      <select
+                        id="closeOnClickOutsideModal"
+                        onChange={(e) => setChanges(e)}
+                      >
+                        <option value="">Select</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>closeOnKeyboardKeys</td>
+                    <td>
+                      <select
+                        id="closeOnKeyboardKeys"
+                        onChange={(e) => setChanges(e)}
+                      >
+                        <option value="">Select</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div>
-            <input
-              type="text"
-              id="birthdate"
-              className="daily-selector"
-              autoComplete="off"
-            />
+          <div className={styles.rightSection}>
+            <div className={styles["pre-container"]}>
+              <div>
+                <p id="message"></p>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="birthdate"
+                  className="daily-selector"
+                  autoComplete="off"
+                />
+              </div>
+              <pre dangerouslySetInnerHTML={{ __html: output }}></pre>
+            </div>
           </div>
-          <pre dangerouslySetInnerHTML={{ __html: output }}></pre>
         </div>
       </div>
     </>
