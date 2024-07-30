@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "index": 0,
+      "title": "Home",
+      "name": "home",
+      "url": "/"
+    },
+    {
+      "index": 1,
+      "title": "Getting Started",
+      "name": "gettingstarted",
+      "url": "/getting-started",
+      "subMenu": [
+        {
+          "title": "Installation",
+          "name": "installation"
+        },
+        {
+          "title": "Styles",
+          "name": "styles"
+        },
+        {
+          "title": "Usage",
+          "name": "usage"
+        },
+        {
+          "title": "Configuration",
+          "name": "configuration"
+        },
+        {
+          "title": "Formatting",
+          "name": "formatting"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "Examples",
+      "name": "examples",
+      "url": "/examples"
+    },
+    {
+      "index": 3,
+      "title": "Playground",
+      "name": "playground",
+      "url": "/playground"
+    },
+    {
+      "index": 4,
+      "title": "Future Scope",
+      "name": "futurescope",
+      "url": "/future-scope"
+    }
+  ]
+}

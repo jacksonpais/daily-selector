@@ -1,0 +1,84 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  color: white;
+  transition: right 0.3s;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.menu.open {
+  right: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.mainmenu {
+  margin-top: 80px;
+}
+
+.mainmenu .active .mainmenu-item {
+  color: #007bff;
+}
+
+.mainmenu-item {
+  display: flex;
+}
+
+.mainmenu-circle {
+  display: flex;
+  align-items: top;
+  margin-right: 8px;
+}
+
+.menu ul li {
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  padding-left: 40px;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.submenu.open {
+  display: block;
+  max-height: 190px;
+}
+
+.submenu li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.submenu .active a {
+  color: #007bff;
+}
+
+.submenu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  margin-left: -30px;
+  background-color: #007bff;
+}
