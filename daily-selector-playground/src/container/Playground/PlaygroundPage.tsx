@@ -156,20 +156,17 @@ export default function PlaygroundPage(props: PlaygroundProps) {
               <table>
                 <thead>
                   <tr>
-                    <th></th>
-                    <th>Option</th>
+                    <th colSpan={2}>Option</th>
                     <th>Property</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td></td>
-                    <td>elementId</td>
+                    <td colSpan={2}>elementId</td>
                     <td>birthdate</td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td>includeHeader</td>
+                    <td colSpan={2}>includeHeader</td>
                     <td>
                       <select
                         id="includeHeader"
@@ -182,8 +179,7 @@ export default function PlaygroundPage(props: PlaygroundProps) {
                     </td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td>displayFormat</td>
+                    <td colSpan={2}>displayFormat</td>
                     <td>
                       <select
                         id="displayFormat"
@@ -195,9 +191,7 @@ export default function PlaygroundPage(props: PlaygroundProps) {
                     </td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td>year</td>
-                    <td></td>
+                    <td colSpan={3}>year</td>
                   </tr>
                   <tr>
                     <td></td>
@@ -228,9 +222,7 @@ export default function PlaygroundPage(props: PlaygroundProps) {
                     </td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td>color</td>
-                    <td></td>
+                    <td colSpan={3}>color</td>
                   </tr>
                   <tr>
                     <td></td>
@@ -257,9 +249,7 @@ export default function PlaygroundPage(props: PlaygroundProps) {
                     </td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td>closeOptions</td>
-                    <td></td>
+                    <td colSpan={3}>closeOptions</td>
                   </tr>
                   <tr>
                     <td></td>
