@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.table-container,
+.pre-container {
+  width: 48%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  height: 20px;
+}
+
+th {
+  background-color: #f4f4f4;
+}

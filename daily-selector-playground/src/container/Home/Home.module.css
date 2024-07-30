@@ -1,0 +1,117 @@
+.tech-container {
+  text-align: center;
+}
+
+.github-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.technologies {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.technology {
+  background-color: #0a508b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.technology:hover {
+  background-color: #0056b3;
+}
+
+.section {
+  padding: 5px;
+}
+
+.otherSections {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.technologySection {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-box-container {
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 45%;
+  box-sizing: border-box;
+  margin: 10px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Pretty box shadow */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.boxContainer {
+  max-width: 1200px;
+}
+
+.leftBox {
+  background-color: #0a508b;
+  color: white;
+  min-height: 80px;
+}
+
+.rightBox {
+  border: 1px solid #0a508b;
+  color: #0a508b;
+}
+
+.boxLink {
+  text-decoration: none;
+  color: #0a508b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxLink:hover {
+  color: #0056b3;
+}
+
+.boxLinkIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.box {
+  flex: 1;
+  min-width: 300px; /* Ensures boxes are at least 300px wide */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.version {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #0a508b;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #0a508b;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.version:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.versionSection {
+  text-align: center;
+  padding: 20px 0;
+}

@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import "./styles.css";
+import { useState } from "react";
+import styles from "./CopyContent.module.css";
 
 interface CopyContentProps {
   content: string;
@@ -25,12 +25,15 @@ export default function CopyContent(props: CopyContentProps) {
   };
 
   return (
-    <div className="code-container">
+    <div className={styles["code-container"]}>
       <pre>{content}</pre>
       {clipboard === true ? (
-        <span className="copy-notification">Copied!</span>
+        <span className={styles["copy-notification"]}>Copied!</span>
       ) : null}
-      <button className="copy-button" onClick={() => copyToClipboard()}>
+      <button
+        className={styles["copy-button"]}
+        onClick={() => copyToClipboard()}
+      >
         {clipboard === false ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,9 +58,9 @@ export default function CopyContent(props: CopyContentProps) {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 13l4 4L19 7"
             />
           </svg>

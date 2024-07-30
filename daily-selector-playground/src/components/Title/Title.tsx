@@ -7,7 +7,7 @@ export default function Title(props: TitleProps) {
   const { title } = props;
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{`${title} - Daily Selector`}</title>
     </Helmet>
   );
 }
