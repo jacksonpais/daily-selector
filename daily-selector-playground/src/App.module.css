@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px 30px 20px 30px;
+}
+
+.section {
+  padding: 5px;
+}
