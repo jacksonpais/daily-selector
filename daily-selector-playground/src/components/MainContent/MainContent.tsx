@@ -9,6 +9,8 @@ import Menu from "../Menu/Menu";
 import styles from "./../../App.module.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { MenuItem, SubMenuItemData } from "../../model/MenuItem";
+import ExamplePage from "../../container/Examples/ExamplesPage";
+import FutureScopePage from "../../container/FutureScope/FutureScopePage";
 
 export default function MainContent() {
   const location = useLocation();
@@ -61,7 +63,15 @@ export default function MainContent() {
             />
             <Route
               path="/playground"
-              element={<PlaygroundPage menuItem={menuItem} />}
+              element={<PlaygroundPage menuItem={menuItem as MenuItem} />}
+            />
+            <Route
+              path="/examples"
+              element={<ExamplePage menuItem={menuItem as MenuItem} />}
+            />
+            <Route
+              path="/future-scope"
+              element={<FutureScopePage menuItem={menuItem as MenuItem} />}
             />
           </Routes>
         </main>
