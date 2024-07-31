@@ -4,6 +4,7 @@ import { MenuItem } from "../../model/MenuItem";
 import styles from "./Palyground.module.css";
 import { useEffect, useState } from "react";
 import Title from "../../components/Title/Title";
+import CopyContent from "../../components/CopyContent/CopyContent";
 
 interface PlaygroundProps {
   menuItem?: MenuItem;
@@ -14,7 +15,7 @@ export default function PlaygroundPage(props: PlaygroundProps) {
 
   useEffect(() => {
     dailySelector.initialize(option);
-    setOutput(cleanup());
+    setOutput(JSON.stringify(option, null, 4));
   }, []);
 
   const [option, setOption] = useState<Options>({
@@ -106,39 +107,7 @@ export default function PlaygroundPage(props: PlaygroundProps) {
     }
     setOption(opt);
     dailySelector.initialize(opt);
-    setOutput(cleanup());
-  };
-
-  const cleanup = (): string => {
-    let finalObj: Options = option;
-    let regexString = "";
-    const brace = {
-      brace: 1,
-    };
-
-    let str = JSON.stringify(finalObj).substring(
-      1,
-      JSON.stringify(finalObj).length - 1
-    );
-    regexString = str.replace(
-      /({|}[,]*|[^{}:]+:[^{}:,]*[,{]*)/g,
-      (p1: string): string => {
-        const returnFunction = (): string =>
-          `<div style="text-indent: ${brace["brace"] * 20}px;">${p1}</div>`;
-        let returnString: string;
-        if (p1.lastIndexOf("{") === p1.length - 1) {
-          returnString = returnFunction();
-          brace["brace"] += 1;
-        } else if (p1.indexOf("}") === 0) {
-          brace["brace"] -= 1;
-          returnString = returnFunction();
-        } else {
-          returnString = returnFunction();
-        }
-        return returnString;
-      }
-    );
-    return `<div style="text-indent: 0px;">dailySelector.initialize({</div>${regexString}<div style="text-indent: 0px;">})</div>`;
+    setOutput(JSON.stringify(option, null, 4));
   };
 
   const yearList = [
@@ -296,7 +265,12 @@ export default function PlaygroundPage(props: PlaygroundProps) {
                   autoComplete="off"
                 />
               </div>
-              <pre dangerouslySetInnerHTML={{ __html: output }}></pre>
+              <CopyContent
+                content={`dailySelector.initialize(${output})`}
+                showMinMaxIcon={true}
+                title="code"
+                showCodeByDefault={true}
+              />
             </div>
           </div>
         </div>

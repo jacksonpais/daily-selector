@@ -1,9 +1,50 @@
-/* App.css */
-
-.code-container {
+.codeContainer {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 30px 0;
+}
+
+.codeHeaderExt {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+}
+
+.codeHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 20px;
+}
+
+.codeHeader span {
+  color: #5b5b5b;
+}
+
+.codeHeaderBtnContainer {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  right: 0;
+}
+
+.codeHeaderbutton {
+  padding: 5px;
+  border: none;
+}
+
+.codeHeaderbutton svg {
+  width: 22px;
+  height: 22px;
+}
+
+.codeHeaderbutton:hover {
+  opacity: 1;
 }
 
 pre {
@@ -15,43 +56,22 @@ pre {
   overflow-x: auto;
   width: 100%;
   box-sizing: border-box;
+  border: 1px solid #ddd;
 }
 
-.copy-notification {
+.paddingTop {
+  padding-top: 65px;
+}
+
+.copyNotification {
   display: inline-block;
   background-color: #e0e0e0;
+  align-content: center;
   color: #014075;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border-radius: 12px;
   font-size: 14px;
-  line-height: 1;
   border: 1px solid #e0e0e0;
-  position: absolute;
-  top: 8px;
-  right: 40px;
   transition: opacity 0.3s;
-}
-
-.copy-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-}
-
-.copy-button:hover {
-  opacity: 1;
-}
-
-.copy-button svg {
-  width: 22px;
-  height: 22px;
+  margin: 2px 3px;
 }
