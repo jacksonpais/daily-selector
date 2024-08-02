@@ -14,7 +14,7 @@ export default function CopyContent(props: CopyContentProps) {
   const [clipboard, setClipboard] = useState<boolean>(false);
 
   const [showCode, setShowCode] = useState<boolean>(
-    showCodeByDefault === undefined ? false : showCodeByDefault
+    showCodeByDefault === undefined ? true : showCodeByDefault
   );
 
   const copyToClipboard = () => {
