@@ -177,8 +177,14 @@ export default function GettingStartedPage(props: GettingStartedProps) {
         >
           <h3>Styles</h3>
           <p>You will need to include daily-selector CSS file.</p>
-          <p>Since this is a ui library, the css files contains the design elements required for the structure and design of the daily-selector</p>
-          <p>Please note that this css contains the basic design of the library and its highly customizable.</p>
+          <p>
+            Since this is a ui library, the css files contains the design
+            elements required for the structure and design of the daily-selector
+          </p>
+          <p>
+            Please note that this css contains the basic design of the library
+            and its highly customizable.
+          </p>
           <p>This step depends on how daily-selector was installed:</p>
           <p className={styles.subSection}>
             <strong>If installed via npm module</strong>
